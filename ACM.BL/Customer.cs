@@ -21,6 +21,17 @@ namespace ACM.BL
 
     public class Customer
     {
+        public Customer()
+        {
+            // default constructor (use ctor tab tab)
+            // Don't actually need
+        }
+
+        public Customer(int customerId)
+        {
+            this.CustomerId = customerId;
+        }
+
         // can have static members to class rather than instance
         public static int InstanceCount { get; set; }
 
@@ -44,7 +55,7 @@ namespace ACM.BL
 
         public string EmailAddress { get; set; }
 
-        public string CustomerId { get; private set; }
+        public int CustomerId { get; private set; }
 
         public string GetFullName()
         {
